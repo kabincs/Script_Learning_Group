@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+img
+{
+    height: 100px;
+    width: 100px;
+	display:block;
+}
+#wrapper
+{
+position:relative;
+height:600px;
+width:800px;
+}
+</style>
+</head>
+<body>
+<!--<label>Staring Number if fibb</label>
+<input id="startNum" value=0 type="number">-->
+<label>Total number Steps</label>
+<input id="totalNum" value=0 type="number">
+<button id="btn">Generate</button>
+<p id="output">Output:</p>
+<div  id="wrapper">
+<img id="image" class="image" src="img/brick.jpg"/>
+</div>
+<script>
+var wrapper=document.getElementById('wrapper');
+var append="";
+var radius=200;
+var x0=300;
+var y0=200;
+
+document.getElementById("btn").addEventListener('click',generateBrick);
+function generateBrick()
+{
+
+ totalNumBricks=Number(document.getElementById("totalNum").value);
+
+for(var count=0;count<totalNumBricks;count++)
+{
+    var x = x0 + radius * Math.cos(2 * Math.PI * count / totalNumBricks);
+    var y = y0 + radius * Math.sin(2 * Math.PI * count / totalNumBricks);   
+append+='<img id="image" style="position:absolute;top:'+y+'px;left:'+x+'px" class="image" src="img/brick.jpg"/>'
+}
+console.log(append)
+wrapper.innerHTML=append;
+}
+
+
+</script>
+</body>
+</html>
