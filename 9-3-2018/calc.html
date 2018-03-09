@@ -1,0 +1,59 @@
+<!DOCUTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="calc.css">
+</head>
+<body>
+	<table border="1">
+	<thead>
+		<tr>
+			<th id="displayn"colspan="4"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><button class="mybtn">0</button></td>
+			<td><button class="mybtn">1</button></td>
+			<td><button class="mybtn">2</button></td>
+			<td><button class="mybtn">3</button></td>
+		</tr>
+		<tr>
+			<td><button class="mybtn">4</button></td>
+			<td><button class="mybtn">5</button></td>
+			<td><button class="mybtn">6</button></td>
+			<td><button class="mybtn">7</button></td>
+		</tr>
+		<tr>
+			<td><button class="mybtn">8</button></td>
+			<td><button class="mybtn">9</button></td>
+			<td><button class="mybtn">.</button></td>
+			<td><button class="mybtn">=</button></td>
+		</tr>
+		<tr>
+			<td><button class="mybtn">+</button></td>
+			<td><button class="mybtn">-</button></td>
+			<td><button class="mybtn">*</button></td>
+			<td><button class="mybtn">/</button></td>
+		</tr>
+		<tr>
+			<td><button class="mybtn">clr</button></td>
+			<td><button class="mybtn">on</button></td>
+			<td><button class="mybtn">off</button></td>
+		</tr>
+	</tbody>
+	</table>
+	<script>
+	var button=document.getElementsByClassName('mybtn');
+	for(var count=0;count<button.length;count++)
+	{
+		button[count].addEventListener('click',clickTest);
+	}
+	
+	
+	function clickTest()
+	{
+	alert('test');
+	}
+	</script>
+</body>
+</html>
