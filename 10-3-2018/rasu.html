@@ -1,0 +1,102 @@
+<!DOCUTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="calc.css">
+</head>
+<body>
+	<table border="1">
+	<thead>
+		<tr>
+			<th class="mybtn" id="displayn"colspan="4"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><button class="mybtn" id="mybtn1">0</button></td>
+			<td><button class="mybtn" id="mybtn2">1</button></td>
+			<td><button class="mybtn" id="mybtn3">2</button></td>
+			<td><button class="mybtn" id="mybtn4">3</button></td>
+		</tr>
+		<tr>
+			<td><button class="mybtn" id="mybtn5">4</button></td>
+			<td><button class="mybtn" id="mybtn6">5</button></td>
+			<td><button class="mybtn" id="mybtn7">6</button></td>
+			<td><button class="mybtn" id="mybtn8">7</button></td>
+		</tr>
+		<tr>
+			<td><button class="mybtn" id="mybtn9">8</button></td>
+			<td><button class="mybtn" id="mybtn10">9</button></td>
+			<td><button class="mybtn" id="mybtn11">.</button></td>
+			<td><button class="mybtn" id="mybtn12">=</button></td>
+		</tr>
+		<tr>
+			<td><button class="mybtn" id="mybtn13">+</button></td>
+			<td><button class="mybtn" id="mybtn14">-</button></td>
+			<td><button class="mybtn" id="mybtn15">*</button></td>
+			<td><button class="mybtn" id="mybtn16">/</button></td>
+		</tr>
+		<tr>
+			<td><button class="mybtn" id="mybtn17">clr</button></td>
+			<td><button class="mybtn" id="mybtn18">on</button></td>
+			<td><button class="mybtn" id="mybtn19">off</button></td>
+			
+		</tr>
+	</tbody>
+	</table>
+	<script>
+	/*Id based click event */
+	/*
+	for(var count=0;count<button.length;count++)
+	{
+	
+		document.getElementById('mybtn'+count+1).addEventListener('click',clickTest);
+	}
+	*/
+	var display=document.getElementById("displayn");
+	var button=document.getElementsByClassName('mybtn')
+	var value1=null;
+	var value2=null;
+	for(var count=0;count<button.length;count++)
+	{
+		button[count].addEventListener('click',clickTest);
+	}
+	
+	function clickTest(event)
+	{
+		var currentValue=event.srcElement.innerHTML;
+		console.log(currentValue);
+
+		if(currentValue=="=")
+		{
+			value2=Number(display.innerHTML);
+			display.innerHTML=sum(value1,value2)
+			
+			
+
+		}
+		else if(currentValue=="+")
+		{
+			
+			value1=Number(display.innerHTML);
+			
+			display.innerHTML="";
+		}
+		else if(currentValue=="clr")
+		{
+		display.innerHTML="";
+		}
+		else{
+		display.innerHTML+=event.srcElement.innerHTML;
+		}
+		
+	}
+	function sum(a,b)
+	{
+	console.log(a+","+b)
+		var result=a+b;
+		return result;
+	
+	}	
+	</script>
+</body>
+</html>
