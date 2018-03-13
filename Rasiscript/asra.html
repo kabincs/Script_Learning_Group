@@ -1,0 +1,154 @@
+<html>
+<head>
+<link rel="stylesheet" href="cal.css">
+</head>
+<body>
+<table border="1">
+	<thead>
+		<tr>
+			<th id="displayn"colspan="6"></th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td><button class="block">1</button></td>
+    <td><button class="block">2</button></td>
+	<td><button class="block">3</button></td>
+	<td><button class="block">4</button></td>
+	<td><button class="block">+</button></td>
+	<td><button class="block">-</button></td>
+	</tr>
+	<tr>
+	<td><button class="block">5</button></td>
+    <td><button class="block">6</button></td>
+	<td><button class="block">7</button></td>
+	<td><button class="block">8</button></td>
+	<td><button class="block">*</button></td>
+	<td><button class="block">/</button></td>
+	</tr>
+	<tr>
+	<td><button class="block">9</button></td>
+    <td><button class="block">0</button></td>
+	<td><button class="block">.</button></td>
+	<td><button class="block">clr</button></td>
+	<td><button class="block">on</button></td>
+	<td><button class="block">off</button></td>
+	</tr>
+	<tr>
+	<td><button class="block">(</button></td>
+    <td><button class="block">)</button></td>
+	<td><button class="block">%</button></td>
+	<td><button class="block">sin</button></td>
+	<td><button class="block">cos</button></td>
+	<td><button class="block">=</button></td>
+	</tr>
+	<script>
+	var display=document.getElementById("displayn");
+	var button=document.getElementsByClassName('block')
+	var value1=null;
+	var value2=null;
+	var addition=false;
+	var subraction=false;
+	var multiplication=false;
+	var division=false;
+	for(var count=0;count<button.length;count++)
+{
+		button[count].addEventListener('click',clickTest);
+	}
+	
+	function clickTest(event)
+	{
+		var currentValue=event.srcElement.innerHTML;
+		console.log(currentValue);
+
+		if(currentValue=="=")
+		{
+
+			value2=Number(display.innerHTML);
+			if(addition==true)
+			{
+			addition=false;
+			display.innerHTML=sum(value1,value2);
+			}
+			else if(subraction==true)
+		{
+			subraction=false;
+			display.innerHTML=sub(value1,value2);
+			}
+			else if(multiplication==true)
+		{
+			multiplication=false;
+			display.innerHTML=mul(value1,value2);
+			}
+			else if(division==true)
+		{
+			division=false;
+			display.innerHTML=div(value1,value2);
+			}
+			else{}			
+			
+		}
+		else if(currentValue=="+")
+		{
+			
+			value1=Number(display.innerHTML);
+			addition=true
+			display.innerHTML="";
+		}
+		else if(currentValue=="-")
+		{
+			
+			value1=Number(display.innerHTML);
+			subraction=true;
+			display.innerHTML="";
+		}
+		else if(currentValue=="*")
+		{
+			
+			value1=Number(display.innerHTML);
+			multiplication=true;
+			display.innerHTML="";
+		}
+		else if(currentValue=="/")
+		{
+			
+			value1=Number(display.innerHTML);
+			division=true;
+			display.innerHTML="";
+		}
+		else if(currentValue=="clr")
+		{
+		display.innerHTML="";
+		}
+		else{
+		display.innerHTML+=event.srcElement.innerHTML;
+		}
+		
+	}
+	function sum(a,b)
+	{
+	console.log(a+","+b)
+		var result=a+b;
+		return result;
+	
+	}
+	function sub(a,b)
+	{
+	var result=a-b;
+	return result;
+	}
+	function mul(a,b)
+	{
+	var result=a*b;
+	return result;
+	}
+	function div(a,b)
+	{
+	var result=a/b;
+	return result;
+	}
+	
+	
+	</script>
+</body>
+</html>
