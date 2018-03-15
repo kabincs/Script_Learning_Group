@@ -1,0 +1,53 @@
+<html>
+<head>
+<link rel="stylesheet" href="num.css">
+</head>
+<body>
+<div class="controls">
+	<select class="number" id="number">
+		<option value="odd">Odd Number</option>
+		<option value="even">Even Number</option>
+		<option value="prime">Prime Number</option>
+	</select>
+	<label>count</label>
+		<input id="totalNum" value=0 type="number">
+		<button id="btn">Generate</button>
+		<p id="output">Output:</p>
+		<script>
+		
+		var execute=document.getElementById('output');
+		var press=true;
+		document.getElementById("btn").addEventListener('click',oddevenprime);
+		   function oddevenprime(){
+		   var option=document.getElementById('number').value;
+		   var num = Number(document.getElementById('totalNum').value);
+		   
+		   for(var count=0; count<num;count++)
+		   {  
+		   if(press==false)
+		   {
+		   if(option=='even')
+		   {
+		     if ( count%2 == 0)
+			 {
+                    execute.innerHTML+=count;
+				    press=true;
+             }
+			}
+			} 
+			else if(option=='odd')
+			{
+				
+				else if(count%2!==0)
+				{
+				execute.innerHTML+=count;
+				press=false;
+				}
+			}
+			}
+			
+                  
+		
+</script>
+</body>
+</html>
