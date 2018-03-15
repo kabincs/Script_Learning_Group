@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+<div class="controls">
+	<select class="number" id="number">
+		<option value="add">Addition</option>
+		<option value="sub">Subtraction</option>
+		<option value="mul">Multiplication</option>
+		<option value="div">Division</option>
+	</select>
+	<label>val1</label>
+		<input id="no1" value=0 type="number">
+		<label>val2</label>
+		<input id="no2" value=0 type="number">
+		<button id="btn">Generate</button>
+		<p id="output">Output:</p>
+		<script>
+		var execute=document.getElementById('output');
+		document.getElementById("btn").addEventListener('click',operation);
+		   var option=document.getElementById('number').value;
+		   
+		   function operation()
+		   { execute.innerHTML="";
+		   var num = Number(document.getElementById('no1').value);
+		   var num1 = Number(document.getElementById('no2').value);
+		    if(option=='add')
+		   {
+		     execute.innerHTML+=num+num1;
+			 }
+		    else if(option=='sub')
+		   {
+		     execute.innerHTML+=num-num1;
+			 }
+			 }
+		</script>
+</body>
+</html>
