@@ -21,29 +21,48 @@
 		   function oddevenprime(){
 		   var option=document.getElementById('number').value;
 		   var num = Number(document.getElementById('totalNum').value);
-		   
+		    
+			execute.innerHTML="";
 		   for(var count=0; count<num;count++)
 		   {  
-		   if(press==false)
-		   {
+		  
+		   
 		   if(option=='even')
 		   {
 		     if ( count%2 == 0)
 			 {
                     execute.innerHTML+=count;
-				    press=true;
+				    
              }
-			}
+			
 			} 
 			else if(option=='odd')
 			{
 				
-				else if(count%2!==0)
+				if(count%2!==0)
 				{
 				execute.innerHTML+=count;
-				press=false;
+				
 				}
 			}
+			else if(option=='prime')
+			{
+				primeCheck(count)
+			}
+			else{}
+			}
+			}
+			
+			function primeCheck(prime)
+			{
+				for(var count=2;count<prime;count++)
+				{
+				   if(prime%count==0)
+				   return;
+				   
+				}
+				
+					execute.innerHTML+=prime+",";
 			}
 			
                   
