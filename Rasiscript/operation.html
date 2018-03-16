@@ -24,14 +24,45 @@
 		   { execute.innerHTML="";
 		   var num = Number(document.getElementById('no1').value);
 		   var num1 = Number(document.getElementById('no2').value);
-		    if(option=='add')
+		  /*  if(option=='add')
 		   {
-		     execute.innerHTML+=num+num1;
-			 }
-		    else if(option=='sub')
+		     execute.innerHTML=addi(num,num1);
+			 }*/
+		      if(option=='sub')
 		   {
-		     execute.innerHTML+=num-num1;
+		     execute.innerHTML=subt(num,num1);
 			 }
+			  else if(option=='mul')
+		   {
+		     execute.innerHTML=mult(num,num1);
+			 alert("rasi")
+			 }
+			  else if(option=='div')
+		   {
+		     execute.innerHTML=divi(num,num1);
+			 }
+			 
+			 else{}
+			 }
+			 function addi(a,b)
+			 {
+			 result=a+b;
+			 return result;
+			 }
+			 function subt(a,b)
+			 {
+			 result=a-b;
+			 return result;
+			 }
+			 function mult(a,b)
+			 {
+			 result=a*b;
+			 return result;
+			 }
+			 function divi(a,b)
+			 {
+			 result=a/b;
+			 return result;
 			 }
 		</script>
 </body>
