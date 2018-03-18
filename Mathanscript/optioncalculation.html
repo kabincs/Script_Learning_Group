@@ -1,0 +1,71 @@
+<html>
+<title>addeven fun</title>
+<head>
+</head>
+<body>
+<label>Chooses this Option</label>
+<select class="number" id="number">
+  <option value="add">Addition</option>
+  <option value="sub">Subraction</option>
+  <option value="mul">Multiplication</option>
+  <option value="div">Division</option>
+</select>
+<label>Enter 1Num</label>
+<input style="color:black;background-color:#FFB6C1;" id="firstnum" value="0" type="Nmuber">
+<label>Enter 2Num</label>
+<input style="color:black;background-color:#FFB6C1;" id="secondnum" value="0" type="Nmuber">
+<button style="color:white;background-color:black;" id="cal">Calculation</button>
+<p id="output"> output:</p>
+<hr>
+<script>
+    var excute=document.getElementById('output');
+    document.getElementById("cal").addEventListener('click',calculate);
+    var option=document.getElementById('number').value;
+ function calculate(){
+    excute.innerHTML="output"; 
+     var a=Number(document.getElementById('firstnum').value);
+     var b=Number(document.getElementById('secondnum').value); 
+      if(option=='add')
+      {
+       excute.innerHTML=sum(a,b);
+      }
+	  else if(option=='sub')
+	  {
+	  excute.innerHTML=sub(a,b);
+	  }
+	  else if(option=='mul')
+	  {
+	  excute.innerHTML=mul(a,b);
+	  }
+	  else if(option='div')
+	  {
+	  excute.innerHTML=div(a,b);
+	  }
+     else{}
+	 }
+    function sum(valuea,valueb)
+    {
+     result=valuea+valueb;
+     return result;
+    }
+   function sub(valuea,valueb)
+  {
+   result=valuea-valueb;
+   return result;
+  } 
+   function mul(valuea,valueb)
+ {
+   result=valuea*valueb;
+   return result;
+ }
+ function div(valuea,valueb)
+ {
+   result=valuea/valueb;
+   return result;
+   }
+   
+ 
+ 
+</script>
+</body>
+</html>
