@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<h3>Creating a sorting method in ascending</h3>
+<button onclick="myFunction()">ascend</button>
+<p id="out">Output:</p>
+<script>
+var num= [10,8,4,3,7,3,2,5,1,9];
+document.getElementById("out").innerHTML =num;    
+
+function myFunction() {
+    num.sort(function(a, b){return a - b});
+    document.getElementById("out").innerHTML =num;
+}
+</script>
+</html>
