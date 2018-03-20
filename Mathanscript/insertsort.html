@@ -1,0 +1,62 @@
+<html>
+<head>
+</head>
+<body>
+<div class="controls">
+	<select class="number" id="number">
+		<option value="ascen">acending</option>
+		<option value="decen">decending</option>
+	</select>
+	<label>Input value</label>
+		<input id="no" value="" type="text">
+		<button id="btn">Generate</button>
+		<p id="output">output</p>
+		</div>
+		<script>
+		//2,3,1,5
+		
+		var arrayvalue=null;
+		var temp=null;
+		var button=document.getElementById('btn');
+		button.addEventListener('click',insertionsorting);
+		var num1=document.getElementById("number").value;
+		var output=document.getElementById("output");
+		function insertionsorting()
+		{
+		var value=document.getElementById("no").value;
+		arrayvalue=value.split(",");
+		//console.log(arrayvalue);
+		arrayvalue[0]=Number(arrayvalue[0]);
+		for(count=1;count<arrayvalue.length;count++)
+		{
+		arrayvalue[count]=Number(arrayvalue[count]);
+		for(insideCount=count;insideCount>0;insideCount--)
+		{
+		
+		temp=null;
+		if(arrayvalue[insideCount-1]>arrayvalue[insideCount])
+		{
+		temp=arrayvalue[insideCount-1];
+		arrayvalue[insideCount-1]=arrayvalue[insideCount];
+		arrayvalue[insideCount]=temp;
+		}
+		else
+		{
+			break;
+		}
+		
+		
+		}
+		}
+		console.log(arrayvalue);
+		
+		
+		}
+		
+		
+	
+		
+		
+		</script>
+		</body>
+		</html>
