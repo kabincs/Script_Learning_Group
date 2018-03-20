@@ -1,0 +1,62 @@
+<html>
+<head>
+</head>
+<body>
+<div class="controls">
+	<select class="number" id="number">
+		<option value="ascen">acending</option>
+		<option value="decen">decending</option>
+		
+	</select>
+	<label>Input value</label>
+		<input id="no1" value="" type="text">
+		<button id="btn">Generate</button>
+		<p id="output">output</p>
+		</div>
+		<script>
+		var sortingArray=null;
+		var output=document.getElementById('output');
+		document.getElementById('btn').addEventListener('click',generateAscDesc);
+		function generateAscDesc()
+		{
+			var sorting=document.getElementById("no1").value;
+			var dropdownVal=document.getElementById('number').value;
+			var temp=null;
+			var sortingCompleate=true;
+			sortingArray=sorting.split(",")
+			console.log(sortingArray);
+			output.innerHTML='output:'
+			//sortingArray[2,1,3]
+			reItreate();
+			function reItreate()
+			{
+			
+			for(var count=0;count<sortingArray.length-1;count++)
+			{
+				if(Number(sortingArray[count])<Number(sortingArray[count+1]) && dropdownVal=='decen')
+				{
+					temp=Number(sortingArray[count]);
+					sortingArray[count]=Number(sortingArray[count+1]);
+					sortingArray[count+1]=temp;
+					sortingCompleate=false;
+				}
+				else if(Number(sortingArray[count])>Number(sortingArray[count+1]) && dropdownVal=='ascen')
+				{
+					temp=Number(sortingArray[count]);
+					sortingArray[count]=Number(sortingArray[count+1]);
+					sortingArray[count+1]=temp;
+					sortingCompleate=false;
+				}
+				else{}
+			}
+			if(sortingCompleate==false)
+			{
+				sortingCompleate=true;
+				reItreate()
+			}
+			}
+			output.innerHTML+=sortingArray;
+		}
+		</script>
+</body>
+</html>

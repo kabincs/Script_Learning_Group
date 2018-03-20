@@ -55,7 +55,14 @@
 			
 			function primeCheck(prime)
 			{
-				for(var count=2;count<prime;count++)
+			if(prime>9)
+			{
+				check=9;
+			}
+			else{
+				check=prime;
+			}
+				for(var count=2;count<check;count++)
 				{
 				   if(prime%count==0)
 				   return;

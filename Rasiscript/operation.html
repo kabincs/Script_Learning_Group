@@ -8,6 +8,7 @@
 		<option value="sub">Subtraction</option>
 		<option value="mul">Multiplication</option>
 		<option value="div">Division</option>
+		<option value="prime">Division</option>
 	</select>
 	<label>val1</label>
 		<input id="no1" value=0 type="number">
@@ -18,31 +19,55 @@
 		<script>
 		var execute=document.getElementById('output');
 		document.getElementById("btn").addEventListener('click',operation);
-		   var option=document.getElementById('number').value;
+		
 		   
 		   function operation()
-		   { execute.innerHTML="";
+		   { execute.innerHTML="output:";
+		      var option=document.getElementById('number').value;
 		   var num = Number(document.getElementById('no1').value);
 		   var num1 = Number(document.getElementById('no2').value);
-		  /*  if(option=='add')
+		  switch(option)
+		  {
+		   case 'add':
+		   execute.innerHTML+=addi(num,num1);
+		   break;
+		   
+		   case 'sub':
+		   execute.innerHTML+=subt(num,num1);
+		   break;
+		   
+		   case 'mul':
+		   execute.innerHTML+=mult(num,num1);
+		   break;
+		   
+		   case 'div':
+		   execute.innerHTML+=divi(num,num1);
+		   break;
+		   
+		   default:
+		   break;
+		  }
+		   /* if(option=='add')
 		   {
-		     execute.innerHTML=addi(num,num1);
-			 }*/
-		      if(option=='sub')
+		     execute.innerHTML+=addi(num,num1);
+			 }
+		      else if(option=='sub')
 		   {
-		     execute.innerHTML=subt(num,num1);
+		     execute.innerHTML+=subt(num,num1);
 			 }
 			  else if(option=='mul')
 		   {
-		     execute.innerHTML=mult(num,num1);
-			 alert("rasi")
+		     execute.innerHTML+=mult(num,num1);
+		
 			 }
 			  else if(option=='div')
 		   {
-		     execute.innerHTML=divi(num,num1);
+		     execute.innerHTML+=divi(num,num1);
 			 }
 			 
-			 else{}
+			 else{
+			 
+			 }*/
 			 }
 			 function addi(a,b)
 			 {
@@ -51,6 +76,7 @@
 			 }
 			 function subt(a,b)
 			 {
+			 
 			 result=a-b;
 			 return result;
 			 }
