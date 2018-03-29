@@ -1,0 +1,50 @@
+<html>
+<head>
+</head>
+<body>
+<input id="no" value="" type="text">
+<button id="btn">Generate</button>
+<script>
+ var cars=["bmw","ferrari","bucati","audi"];
+ var value=document.getElementById('no').value;
+ document.getElementById('btn').addEventListener('click',fun);
+  
+  
+function fun()
+{
+ var value=document.getElementById('no').value;
+ var valueCheck='No';
+ console.log(cars);
+ console.log(value);
+ /*indexPos=cars.indexOf(value);
+ console.log(indexPos);
+ if(indexPos!=-1)
+ {
+ alert("value is therer")
+ }
+ else{
+ alert("value is not there")
+ }*/
+ 
+ for(var count=0;count<cars.length;count++)
+ {
+ if(cars[count]==value)
+ {
+ valueCheck='Yes';
+ break; 
+ }
+ else
+ {
+ valueCheck='No';
+ }
+ }
+ if(valueCheck=='Yes')
+ alert(count);
+ else 
+ alert("-1")
+ 
+ }
+ 
+
+</script>
+</html> 
