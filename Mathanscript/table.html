@@ -1,0 +1,51 @@
+<html>
+<head>
+</style>
+</head>
+<body>
+<div>
+<table>
+<tr>
+<td>Name<input id="row" value="" type="text"></td>
+<td>Age<input id="row1" value="" type="text"></td>
+<td>Count<input id="no" value="" type="text"></td>
+</tr>
+</table>
+</div>
+<div>
+<p>Create table</p>
+<table id="mydata"  border="1" cellpadding="5">
+  <tr>
+     <td>Name</td>
+     <td>Age</td>
+	 <td>Count</td>
+  </tr>
+</table>
+</div>
+<br>
+<br>
+<button id="btn">Add</button>
+<button id="btn1">Remove</button>
+<script>
+document.getElementById('btn').addEventListener('click',addtable)
+
+function addtable(){
+
+var name=document.getElementById('row').value;
+var age=document.getElementById('row1').value;
+var no=document.getElementById('no').value;
+var table=document.getElementById('mydata').value;
+
+var rowcount=table.rows.length;
+console.log(rowcount);
+var row=table.insertRow(rowcount);
+//console.log(row);
+
+row.insertCell(0).innerHTML=name.value;
+row.insertCell(0).innerHTML=age.value;
+row.insertCell(1).innerHTML=no.value;  
+}	
+</script>
+
+</body>
+</html>
