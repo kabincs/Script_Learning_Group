@@ -1,0 +1,90 @@
+<html>
+<head></head>
+<style>
+body{
+ border: 5px solid gray;
+ padding: 10px;
+ 
+}
+table,td,th{
+ border: 0.1px solid red;
+ padding:10px;
+ margin-left: 2.5in;
+ }
+ table{
+ padding:0px;
+ }
+ th{
+ background-color: blue;
+ opacity: 0.8;
+ color:white;
+  }
+ td{
+ background-color: Cyan;
+ color: magenta;
+ font-weight: bold;
+ padding-left: 25px;
+} 
+  
+</style>
+<body>
+<table>
+<tbody id="a">
+<tr>
+<th>Year-1</th>
+<th>Year-2</th>
+</tr>
+<tr>
+<td>19</td>
+<td>92</td>
+</tr>
+</tbody>
+</table>
+<h1>Program Description:</h1>
+<p>I) We want to split in years,So we have using array method<code>years=["1990","1991"]</code></p>
+<p>II) Our target for create a table format</p>
+<p>III) Ok, first one we have concept with for looping method..</p>
+<p>IV) Next, declare the initial value of <code>i=0;</code>we want to dynamic value so put into <code>"i<em><</em>years.length"</code>,after add the value for <code>i++</code></p>
+<p>V) So years[i] is the array[0] and ok,but this is a string value for["1990"].we want to split,because one new function in substring().
+used in split numbers.finally added to years[i].substring(0,2),this is parameter.starting point-0,ending point-2.2 is maximum value.next we got a one part of value in 19.
+then one more added for years[i].substring(2,4).</p>
+<p>VI)2 part of added for<code> +""+ </code>this concatenation method ...add to values.</p>
+<p> VII)Create	 id="a" for <code>tbody</code> and fetching table body for <code>document.getElementById("a").</code>
+and <code>innerHTML</code> is tbody inside datalist.</p>
+<p> VIII) same process concatenation for table data.</p>
+ 
+
+</body>
+<script>
+years=["1994","1995","1996","1997","1998","1994","1995","1996","1997","1998","1994","1995","1996",
+"1997","1998","1994","1995","1996","1997","1998","1994","1995","1996","1997","1998","1994","1995",
+"1996","1997","1998","1994","1995","1996","1997","1998","1994","1995","1996","1997","1998","1994",
+"1995","1996","1997","1998"];
+
+<!--normal method in splits-->
+
+
+
+/*console.log(years[0].substring(0,2))
+console.log(years[0].substring(2,4))
+console.log(years[1].substring(0,2))
+console.log(years[1].substring(2,4))
+console.log(years[2].substring(0,2))
+console.log(years[2].substring(2,4))
+console.log(years[3].substring(0,2))
+console.log(years[3].substring(2,4))
+console.log(years[4].substring(0,2))
+console.log(years[4].substring(2,4))*/
+
+ 
+<!--looping method in splits-->
+
+
+for(i=0;i<years.length;i++)
+{
+document.getElementById("a").innerHTML += "<tr><td>"+years[i].substring(0,2)+"</td><td>"+years[i].substring(2,4)+"</td></tr>";
+console.log(years[i].substring(0,2)+" "+years[i].substring(2,4))
+}
+
+</script>
+</html>
