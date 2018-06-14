@@ -1,0 +1,113 @@
+<html>
+<head></head>
+<style>
+ input{
+ border-radius: 5px;
+ }
+ input:focus{
+ background-color: yellow;
+ color: darkblue;
+ font-weight: bold;
+ font-style: italic;
+ border-radius: 40px;
+ border: none;
+  }
+ button{
+ position:absolute;
+ left:3.1in;
+ background-color: magenta;
+ width: 100px;
+ padding: 10px;
+ color: yellow;
+ font-weight: bold;
+ transition: width 1s;
+ }
+button #a{
+ transition-timing-function: linear;
+  }
+button:hover {
+  width: 110px;
+}
+ table{
+  margin-top: 0.8in;
+  border: 0.1px solid blue;
+ }
+tr{
+ background-color: Cyan;
+ color: magenta;
+ border: 1px solid blue;
+ padding: 10px;
+}
+th{
+ border: 1px solid blue;
+ padding: 10px;
+ background-color: blue;
+ color: white;
+} 
+</style>
+<body>
+<label>Enter Start Num:</label>
+<input id="start" type="number" value="num" name="Starting counter" placeholder="Starting Num">
+<label>Enter End Num:</label>
+<input id="table" type="number" value="num1" name="Ending counter" placeholder="Table Num">
+<label>Table Count!</label>
+<input id="count"type="number" value="count" name="table counter" placeholder="Table count">
+<br>
+<br>
+<br>
+<button id="btn">Generate</button>
+<table>
+<tbody id="tab">
+<tr>
+<th>Count</th>
+<th>Table</th>
+<th>Sum</th>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+</body>
+<script>
+document.getElementById("btn").addEventListener('click',generate)
+function generate()
+{
+value1=Number(document.getElementById("start").value);
+value2=Number(document.getElementById("table").value);
+count=Number(document.getElementById("count").value);
+/*ans=value1*value2;*/
+for(i=value1;i<=count;i++)
+{
+ans=i*value2;
+/*console.log(ans)*/
+
+console.log(value1+" "+value2+" "+ans)
+document.getElementById("tab").innerHTML += "<tr><td>"+i+"</td><td>"+value2+"</td><td>"+ans+"</td></tr>";
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
