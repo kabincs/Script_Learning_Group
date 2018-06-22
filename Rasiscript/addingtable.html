@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" href="addtbl.css">
+</head>
+<body>
+<label> Start Number:</label>
+<input id="Value" type="number">
+<label> Table:</label>
+<input id="Tables" type="number">
+<label>Total Values:</label>
+<input id="Total"type="number">
+<button id="btn">Generate</button>
+<table>
+<tbody id="wrapper">
+<tr>
+<th>Value</th>
+<th>Table</th>
+<th>Result</th>
+</tr>
+</tbody>
+</table>
+</body>
+<script>
+document.getElementById("btn").addEventListener('click',generate)
+function generate()
+{
+var1=Number(document.getElementById("Value").value);
+tab=Number(document.getElementById("Tables").value);
+tot=Number(document.getElementById("Total").value);
+for(i=var1;i<=tot;i++)
+{
+ans=i*tab;
+console.log(var1+" "+tab" "+ans)
+document.getElementById("wrapper").innerHTML
+
+}
+}
+</script>
+</html>
