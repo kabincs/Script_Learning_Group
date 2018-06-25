@@ -1,0 +1,130 @@
+<html>
+<head></head>
+<body>
+
+<script>
+/*function people(name,age){
+ 
+this.name = name;
+this.age = age;
+ 
+}
+var mathan = new people("heart raj",25)
+var john = new people("peter",23)
+
+console.log(mathan.name)
+console.log(john.age)
+
+
+1)<!-- Function declaration -->
+
+function sum(a,b){
+ return a*b;
+
+}
+console.log(sum((3,9))
+
+<!-- Function expression,the function is anonymous.-->
+
+var exp = function(a,b){
+ return a*b;
+ }
+ console.log(exp(2,6))
+ 
+2)<!-- Arrow function -->
+
+var fun=["apple","orange","watermelon"]
+console.log(fun.length)
+fun[0]
+"apple"
+fun[1]
+"orange"
+fun[2]
+"watermelon"
+fun[0].length
+5
+fun[1].length
+6
+fun[2].length
+10
+
+3)
+part 1:
+var people = { name:"john",age:21,city:"new york",
+               value:function(){
+			   return this;
+			   }
+			   }
+			   console.log(people.value())
+			   
+/*this is the owner of people,people is the object.so we output [object object]*/
+
+part 2:
+
+var people = { name:"john",age:21,city:"new york",
+               value:function(){
+			   return this.name+" "+this.age;
+			   }
+			   }
+			   console.log(people.value())
+
+
+   /*this refere to people object,people refere to value method.
+The name property of,this (people)....people is the object.*/
+
+4)global object 
+
+var x = this;
+ console.log(x)
+  
+ <!-- this refere to global object .so browser the golabl object is object window -->
+ 
+ function myfunction(){
+  return this;
+  
+ }
+ console.log(myfunction())
+
+<!-- use in function ,this refere to the object window; -->
+
+5) call() and apply() 
+
+var people1 = {
+    fullName: function() {
+     return this.firstName + " " + this.lastName;
+    }
+}
+var people2 = {
+    firstName:"John",
+    lastName: "Doe",
+}
+people1.fullName.call(people2);  
+
+<!-- object ah argument ah use pannalam this keyword use panni -->
+
+/*when calling person1.fullName with person2 as argument, this will refer to person2, 
+even if it is a method of person1:*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
