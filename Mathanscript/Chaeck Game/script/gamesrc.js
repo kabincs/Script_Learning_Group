@@ -1,0 +1,217 @@
+
+
+  var button = document.getElementsByClassName("but");
+ for(var i = 0;i<button.length;i++){
+	 
+	  button[i].addEventListener('click',mainFunction)
+	 
+ }
+ 
+  
+  var currentPlayer = "O";
+  function mainFunction(event){
+	  /* var value = event.target.getAttribute("data-value")   
+  console.log(event.target.getAttribute("data-value"))
+  console.log(event.target.getAttribute("disable"))*/
+   if(event.target.getAttribute("disable")=="true"){
+		return ;
+		
+	}
+    event.target.setAttribute("disable","true");
+	var totalBox = 9;
+	--totalBox;
+	   if(currentPlayer== "O"){
+		currentPlayer= "X";
+        event.srcElement.innerHTML = "X";
+	   }
+	   else{
+		    currentPlayer = "O"
+		     event.srcElement.innerHTML = "O";
+		   
+	   }
+	   
+	   
+	   var but1 = document.getElementById("but1").innerHTML;
+	   var but2 = document.getElementById("but2").innerHTML;
+	   var but3 = document.getElementById("but3").innerHTML;
+	   var but4 = document.getElementById("but4").innerHTML;
+	   var but5 = document.getElementById("but5").innerHTML;
+	   var but6 = document.getElementById("but6").innerHTML;
+	   var but7 = document.getElementById("but7").innerHTML;
+	   var but8 = document.getElementById("but8").innerHTML;
+	   var but9 = document.getElementById("but9").innerHTML;
+	  
+  if(but1=="X" && but4=="X" && but7=="X"){
+	  // alert("Player X win the Match!1")
+	  document.getElementById('id01').style.display='block';
+	   // window.location.reload();
+	  // backGround(b1,b2,b3)
+	 // style.backgroundColor = "green";
+  }
+  else if(but1=="O" && but4=="O" && but7=="O"){
+	  document.getElementById('id02').style.display='block';
+	   // window.location.reload();
+	  // alert("Player O win the Match!2")
+	  // backGround(b1,b2,b3)
+  }
+ else if(but1=="X" && but5=="X" && but9=="X"){
+	  // window.location.reload();
+	  document.getElementById('id01').style.display='block';
+	 // alert("Player X win the Match!3")
+	 // backGround(b1,b2,b3)
+ }
+ else if(but1=="O" && but5=="O" && but9=="O"){
+	 document.getElementById('id02').style.display='block';
+	  // window.location.reload();
+	 // alert("Player O win the Match!4")
+ }
+else if(but2=="X" && but5=="X" && but8=="X"){
+	document.getElementById('id01').style.display='block';
+	 // window.location.reload();
+	 // alert("Player X win the Match!5")
+}	
+else if(but2=="O" && but5=="O" && but8=="O"){
+	document.getElementById('id02').style.display='block';
+	 // window.location.reload();
+	// alert("Player O win the Match!6")
+}	
+else if(but3=="X" && but6=="X" && but9=="X"){
+	document.getElementById('id01').style.display='block';
+	 // window.location.reload();
+     // alert("Player X win the Match!7")
+}
+else if(but3=="O" && but6=="O" && but9=="O"){
+	document.getElementById('id02').style.display='block';
+	 // window.location.reload();
+    // alert("Player O win the Match!8")
+}
+else if(but7=="X" && but8=="X" && but9=="X"){
+	document.getElementById('id01').style.display='block';
+	 // window.location.reload();
+     // alert("Player X win the Match!9")
+}
+else if(but7=="O" && but8=="O" && but9=="O"){
+	document.getElementById('id02').style.display='block';
+	 // window.location.reload();
+	// alert("Player O win the Match!10")
+}
+else if(but4=="X" && but5=="X" && but6=="X"){
+	document.getElementById('id01').style.display='block';
+	 // window.location.reload();
+     // alert("Player X win the Match!11")
+}
+else if(but4=="O" && but5=="O" && but6=="O"){
+	document.getElementById('id02').style.display='block';
+	 // window.location.reload();
+    // alert("Player O win the Match!12")
+}	
+else if(but3=="X" && but5=="X" && but7=="X"){
+	document.getElementById('id01').style.display='block';
+	 // window.location.reload();
+	// alert("Player X win the Match!13")
+}
+else if(but3=="O" && but5=="O" && but7=="O"){	
+   document.getElementById('id02').style.display='block';
+     // window.location.reload();
+    // alert("Player O win the Match!14")
+}   
+else if(but1=="X" && but2=="X" && but3=="X"){
+	document.getElementById('id01').style.display='block';
+	 // window.location.reload();
+	// alert("player X win the Match!15")
+}	
+else if(but1=="X" && but2=="X" && but6=="X" && but7=="X" && but8=="X"){
+	document.getElementById('id03').style.display='block';
+	// alert("Draw the Match!")
+}
+else if(but1=="X" && but2=="X" && but6=="X" && but7=="X" && but9=="X"){
+	document.getElementById('id03').style.display='block';
+	// alert("Draw the Match!")
+}
+else if(but1=="X" && but3=="X" && but4=="X" && but5=="X" && but8=="X"){
+	document.getElementById('id03').style.display='block';
+	// alert("Draw the Match!")
+}
+else if(but1=="X" && but3=="X" && but4=="X" && but8=="X" && but9=="X"){
+	document.getElementById('id03').style.display='block';
+       // alert("Draw the Match!")
+}
+else if(but1=="X" && but3=="X" && but4=="X" && but6=="X" && but8=="X"){
+	document.getElementById('id03').style.display='block';
+         // alert("Draw the Match!")
+}
+else if(but2=="X" && but5=="X" && but6=="X" && but7=="X" && but9=="X"){
+	document.getElementById('id03').style.display='block';
+    // alert("Draw the Match!")
+}
+else if(but2=="X" && but3=="X" && but4=="X" && but8=="X" && but9=="X"){
+	document.getElementById('id03').style.display='block';
+    // alert("Draw the Match!")
+}
+else if(but1=="X" && but3=="X" && but6=="X" && but7=="X" && but8=="X"){
+	document.getElementById('id03').style.display='block';
+       // alert("Draw the Match!")
+}
+else if(but1=="X" && but5=="X" && but6=="X" && but7=="X" && but8=="X"){
+	document.getElementById('id03').style.display='block';
+       // alert("Draw the Match!")
+}
+else if(but1=="X" && but2=="X" && but5=="X" && but6=="X" && but7=="X"){
+	document.getElementById('id03').style.display='block';
+       // alert("Draw the Match!")
+}
+else if(but3=="X" && but4=="X" && but5=="X" && but8=="X" && but9=="X"){
+	document.getElementById('id03').style.display='block';
+       // alert("Draw the Match!")
+}
+else if(but1=="X" && but3=="X" && but5=="X" && but6=="X" && but8=="X"){
+	document.getElementById('id03').style.display='block';
+       // alert("Draw the Match!")
+}
+else{}	
+  }
+  
+document.getElementById('id01').addEventListener('click',tabClose)
+document.getElementById('id02').addEventListener('click',tabClose)
+document.getElementById('id03').addEventListener('click',tabClose)
+function tabClose(){
+	
+ document.getElementById('id01').style.display='none';
+ document.getElementById('id02').style.display='none';
+ document.getElementById('id03').style.display='none';
+ window.location.reload();
+
+}
+
+
+document.getElementById("refresh").addEventListener('click',refresh)
+ function refresh(){
+
+  window.location.reload();
+   
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+/*function backGround(b1,b2,b3){
+  b1.style.background-color = "gray";
+  b2.style.background-color = "gray";
+  b3.style.background-color = "gray";
+ }*/
+ 	
+// result.style.backgroundColor = "red";	
+   
+ 
+
+ 
+ 
+	  
+	  
+	
+   
+  
+	
+		
