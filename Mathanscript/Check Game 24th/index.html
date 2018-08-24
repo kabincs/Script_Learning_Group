@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Check Game</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+</head>
+<body>
+<!-- <video autoplay muted loop> 
+  <source src="videos/forest.mp4" type="video/mp4">
+</video>-->
+
+
+<table>
+<thead>
+<tr>
+<!-- <th style="position:absolute;left:100px;top:10px;font-family:sans-serif;color:silver;text-shadow: 2px 2px 2px black;"> 
+Check Game Version 1.0</th>
+</tr>-->
+</thead>
+<tbody id="tab"> 
+<!-- <tr> 
+<td><button class="but" id="but1" data-value=1></button></td>
+<td><button class="but" id="but2" data-value=2></button></td>
+<td><button class="but" id="but3" data-value=3></button></td>
+</tr>
+<tr> 
+<td><button class="but" id="but4" data-value=4></button></td>
+<td><button class="but" id="but5" data-value=5></button></td>
+<td><button class="but" id="but6" data-value=6></button></td>
+</tr>
+<tr>
+<td><button class="but" id="but7" data-value=7></button></td>
+<td><button class="but" id="but8" data-value=8></button></td>
+<td><button class="but" id="but9" data-value=9></button></td>
+</tr> -->
+</tbody>
+</table>
+<br>
+<br>
+<input id="count" style="margin-left:50px;margin-bottom: 20px;" type="number" name="count">
+<button id="val" style="background-color:green;width:80px;height:50px;">click</button>
+
+<input  id="refresh" type="button" value="Refresh" name="" >
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom w3-card-4">
+      <header class="w3-container w3-teal" > 
+        <span class="w3-button w3-display-topright">&times;</span>
+        <h2 id="win">Player......<span style="color:red;">X</span>....Won the Match!</h2>
+      </header>
+      <div class="w3-container">
+        <p style="text-align:center;color:#1f3b4d;">Congratulations!..You have a new record of Check Game 2.0!</p>
+       
+      </div>
+      <footer class="w3-container w3-teal">
+        <p style="color:pink;text-align:center;">Thank You!</p>
+      </footer>
+    </div>
+  </div>
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span class="w3-button w3-display-topright">&times;</span>
+        <h2 id="win">Player......<span style="color:red;">O</span>....Won the Match!</h2>
+      </header>
+      <div class="w3-container">
+        <p style="text-align:center;color:#1f3b4d;">Congratulations!..You have a new record of Check Game 2.0!</p>
+       
+      </div>
+      <footer class="w3-container w3-teal">
+        <p style="color:pink;text-align:center;">Thank You!</p>
+      </footer>
+    </div>
+  </div>
+  <div id="id03" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2 style="text-align:center;color:Deep Orange;">Match is Draw!</h2>
+      </header>
+      <div class="w3-container">
+        <p style="text-align:center;color:#1f3b4d;">Please try Again!</p>
+		</div>
+      <footer class="w3-container w3-teal">
+        <p  style="color:pink;text-align:center;">Thank You!</p>
+      </footer>
+    </div>
+  </div>
+</body>
+<script src="script/script.js"></script>
+</html>
