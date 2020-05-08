@@ -1,0 +1,18 @@
+*{
+  
+    background-color: black;
+}
+.p{ 
+    background-color: white;
+    display: flex;
+    flex:1;
+
+}
+p{
+    background-color: blue;
+    flex-direction:  column;
+
+}
+.contact, .portfolio{
+    flex-direction: column;
+}
