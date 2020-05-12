@@ -1,0 +1,15 @@
+check we are there in master branch...
+if u r not in master -->git checkout master
+pull the recent checkout of other -->git pull
+thn create brench using this commant---> git branch branchname
+move to the branch --> git checkout branch.
+do your code changes.....
+......................
+-->git status. / for checking the changesfile.
+add the file by usingthe -->git add filename.
+check whether all files are added..--> git status.
+commit change file to the stage..with msg..-->git commit -m"your msg".
+push the change file to the main repository--> git push.
+
+
+
