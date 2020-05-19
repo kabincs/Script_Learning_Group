@@ -1,0 +1,21 @@
+Create Zoom Account and 
+Download the software for meeting
+-----------------------------------
+
+Provide the email address for adding to Script learning group and give permission in git.
+After the permission please check ur mail for the invitation and accept invitation
+
+Editor
+------- 
+visual studio code
+ 
+repository
+-----------
+create git account using https://github.com
+Download
+Git, tortisee git,git bash
+ 
+
+Additionaly(if requried) 
+------------------------
+notepad++
