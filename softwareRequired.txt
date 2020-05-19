@@ -9,7 +9,7 @@ Editor
 ------- 
 visual studio code
  
-repository
+repository for git
 -----------
 create git account using https://github.com
 Download
