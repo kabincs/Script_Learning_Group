@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Resume using bootstrap</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/css/bootstrap.css" >
+        <link rel="stylesheet" href="../fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.css" >
+        <style>
+            *{
+                font-size: 18px;
+            }
+            .box {
+                background-color: #fff;
+                border: 4px solid black;
+                padding: 10px;
+            }
+            .box1{
+                border-bottom: 8px solid black;
+            }
+            h2{
+                text-align: center;
+            }
+           
+            .container{
+                border: 4px solid black;
+            }
+            .summary{
+                background-color: blueviolet;
+                padding: 15px;
+                font-size: 25px;
+            }
+            .flex{
+                display: flex;
+                justify-content: space-around;
+            }
+            input {
+                -webkit-appearance: none;
+                width: 180px;
+                height: 20px;
+                margin: 10px 50px;
+                background: linear-gradient(to right, #0d3d34 0%, #0d3d34 100%);
+                background-size: 250px 10px;
+                background-position: center;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                outline: none;
+                border-radius:40px;
+                zoom: 130%;
+                display: block;
+                margin: auto;
+                margin-bottom: 30px;
+                }
+            input::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 20px;
+                height: 20px;
+                background: #32a891;
+                border-radius:25px;
+                position: relative;
+                z-index: 3;
+                }
+            input::-webkit-slider-thumb:after {
+                content: " ";
+                width: 160px;
+                height: 10px;
+                position: absolute;
+                z-index: 1;
+                right: 20px;
+                top: 5px;
+                background: #2ecc71;
+                }
+            .range{
+                    margin-top:30px;
+                }
+                .demo1:hover{
+                    value:70;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 box">
+                    <h1>M.Esakki Muthu@Raj</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 box">
+                  <p class="summary">
+                    To become a successful expert in
+                    the field of Information Technology by channelizing
+                    my technical knowledge and skills to ensure personal
+                    and professional growth and to contribute to the prosperity
+                    of the organization.To work in a global competitive environment
+                    on challenging assignment that shall yield the twin benefits of 
+                    job satisfaction and steady growth.
+                  </p>
+                  <span class="flex">
+                    <i class="fa fa-file-word fa-2x" ></i>	
+                    <i class="fas fa-align-justify fa-2x"></i>
+                    <i class="fas fa-eraser fa-2x"></i>
+                    <i class="fas fa-pencil-alt fa-2x"></i>
+                    <i class="far fa-file-code fa-2x"></i>
+                    <i class="fas fa-database fa-2x"></i>
+                  </span> 
+                </div>
+                <div class="col-sm-4 box">
+                    <div class="row">
+                        <div class="col-sm-12 box1">
+                            <h2 id="h2">Contact</h2>
+                            <p class="contact"><span class="ic"><i class="fab fa-whatsapp fa-2x"></i></span>7094385334</p>
+                            <hr>
+                            <p class="contact"><span class="ic"><i class="fas fa-envelope-open-text fa-2x"></i></span>esakkimuthurajm12@gmail.com</p>
+                        </div>
+                        <div class="col-sm-12 ">
+                            <h2>portfolio</h2>
+                            <hr></hr>
+                            <a href="https://github.com/RiyoRaj18/Esakki-Muthu-Raj" target="_blank"><span class="ic"><i class="fab fa-git-alt fa-2x"></i></span>My Portfolio</a>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 box">
+                    <div class="range">
+                        <h2><span class="ic"><i class="fab fa-html5 fa-2x"></i></span>HTML</h2> 
+                        <input type="range"  class="demo1">
+                        <h2><span class="ic"><i class="fab fa-css3-alt fa-2x"></i></span>CSS</h2>
+                        <input type="range" value="60" class="demo">
+                    </div>
+                </div>
+                <div class="col-sm-4 box">
+                    <div class="range">
+                        <h2><span class="ic"><i class="fab fa-python fa-2x"></i></span>Python</h2>
+                          <input type="range" value="30" class="demo">
+                        <h2><span class="ic"><i class="fab fa-adobe fa-2x"></i></span>Adobe Xeed</h2>
+                          <input type="range" value="30" class="demo">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-12 box">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio dolorum quae delectus, magni quos voluptatem maiores tempora totam. Consequuntur at soluta quam iure eaque. Quidem cum earum necessitatibus temporibus molestias.
+                        </div>
+                        <div class="col-sm-12 box">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error natus inventore ducimus. Temporibus in fuga ut fugiat soluta quae. Earum optio placeat nobis vitae, quasi delectus sed blanditiis vero quas.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-4 box">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum nemo voluptatem dicta recusandae vero fugit exercitationem quam rem ex modi! Esse reiciendis odit corrupti ab veniam commodi debitis nihil tenetur?
+                </div>
+                <div class="col-sm-4 box">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum nemo voluptatem dicta recusandae vero fugit exercitationem quam rem ex modi! Esse reiciendis odit corrupti ab veniam commodi debitis nihil tenetur?
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-12 box">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio dolorum quae delectus, magni quos voluptatem maiores tempora totam. Consequuntur at soluta quam iure eaque. Quidem cum earum necessitatibus temporibus molestias.
+                        </div>
+                        <div class="col-sm-12 box">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error natus inventore ducimus. Temporibus in fuga ut fugiat soluta quae. Earum optio placeat nobis vitae, quasi delectus sed blanditiis vero quas.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

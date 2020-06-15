@@ -1,18 +1,75 @@
 *{
-  
     background-color: black;
 }
-.p{ 
-    background-color: white;
+.main{
+   width: 100%;
+}
+.head{
+    color: white;
+    width: 100%;
+    height: 10%;
+}
+.first-row {
+    width: 100%;
+    height: 40%;
     display: flex;
-    flex:1;
-
 }
-p{
-    background-color: blue;
-    flex-direction:  column;
-
+#para{
+    background-color: white;
+    width: 69.5%;
+    height: 100%;
+    margin: 0.5%;
 }
-.contact, .portfolio{
+.first-column{
+    width: 29.5%;
+    height: 100%;
     flex-direction: column;
+    margin: 0.5%;
+}
+.one{
+    background-color: white;
+    width: 100%;
+    height: 47%;
+    
+}
+.two{
+    background-color: white;
+    width: 100%;
+    height: 48%;
+    margin-top: 3.5%;
+}
+.mid-row{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    margin: 0.5%;
+}
+.par{
+    flex-direction: row;
+    width: 69.5%;
+    height: 100%;
+    margin: 0.5%;
+}
+.ro{
+    background-color: white;
+    width:34.5%;
+    height: 100%;
+    margin: 0.5%;  
+}
+.row{
+    background-color: white;
+    width:34.5%;
+    height: 100%;
+    margin: 0.5%;
+}
+.mid-column{
+    width: 29.5%;
+    height: 100%;
+    flex-direction: column;
+    margin: 0.5%;
+}
+.three{
+    background-color: white;
+    width: 100%;
+    height: 47%;   
 }

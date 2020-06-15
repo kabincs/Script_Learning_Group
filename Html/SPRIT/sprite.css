@@ -1,0 +1,7 @@
+#sprite{
+    width: 512px;
+    height: 256px;
+    border: 1px solid black;
+    background-image: url("cat.png") ;
+
+}
