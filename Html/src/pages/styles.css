@@ -1,0 +1,12 @@
+.read-more {
+  height: auto;
+}
+
+.read-less {
+  height: 50px;
+  overflow: hidden;
+}
+
+.list-group {
+  display: inline-block;
+}
